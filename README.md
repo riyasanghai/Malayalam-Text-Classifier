@@ -1,18 +1,49 @@
-# Malayalam-Text-Classifier
-Sentiment analysis system for Malayalam Youtube Comments
+# Malayalam Text Classifier
 
-Project Overview
-This project focuses on building sentiment analysis system for Malayalam Text. The classifier analyzes user comments and predicts whether the sentiment is Positive, Negative or Neutral. The system combines traditional Machine Learning Algorithms and deep learning techniques. The application includes a web interface where users cam enter Malayalam Text and recieve real-time sentiment predictions. 
+A web application that classifies Malayalam text into positive, negative, or neutral sentiment.
 
-Objectives
-- Develop a sentiment classification system for Malayalam Text.
-- Build an end to end Pipeline including Preprocessing. feature extraction, model training, and evalution.
+## 📁 Essential Files
 
-Dataset
-The dataset consists of Malayalam Youtube Comments collected using youtube data api and manually labelled into three sentiment categories. 
-Dataset summary: 
-Total comments: 5212
-positive: 1917
-negative: 1307
-neutral: 1988
-To ensure quality, the dataset was viewed and validated by native Malayalam speakers. 
+1. **`flask_app.py`** - Backend server (Python)
+2. **`se.html`** - Frontend interface (HTML)
+3. **`textclassifier.ipynb`** - ML training notebook (Jupyter)
+4. **`malayalam_dataset.csv`** - Dataset (5,211 samples)
+5. **`trained_model.pkl`** - Trained XGBoost model (74% accuracy)
+6. **`label_encoder.pkl`** - Label encoder
+7. **`venv/`** - Python virtual environment
+8. **`requirements_flask.txt`** - Python dependencies
+9. **`quick_start.sh`** - Quick start script
+
+---
+
+## 🚀 How to Run
+
+### Method 1 - Quick Start:
+```bash
+cd /Users/riyasanghai/Desktop/project
+./quick_start.sh
+```
+
+### Method 2 - Manual:
+```bash
+cd /Users/riyasanghai/Desktop/project
+source venv/bin/activate
+python flask_app.py
+```
+
+Then open `se.html` in your browser.
+
+---
+
+## ✅ Features
+
+- Malayalam text input only (validation included)
+- Sentiment: Positive / Negative / Neutral
+- 74% accuracy (XGBoost model trained on 5,211 samples)
+- Real-time classification without page reload
+
+---
+
+## 🛑 To Stop Server
+
+Press `Ctrl + C` in the terminal window.
